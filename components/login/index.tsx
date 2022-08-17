@@ -34,21 +34,21 @@ export const Form = () => {
           <div className="flex flex-col mb-2">
             <div className="relative ">
               <Input
-                label="NOMBRE LABEL"
+                label="First Name"
                 type="text"
                 placeHolder="Nombre asdas"
                 register={register}
                 required
               ></Input>
               <Input
-                label="NOMBRE LABEL"
+                label="First Name"
                 type="password"
                 placeHolder="Nombre asdas"
                 register={register}
                 required
               ></Input>
               <Input
-                label="NOMBRE LABEL"
+                label="First Name"
                 type="text"
                 placeHolder="Nombre asdas"
                 register={register}
