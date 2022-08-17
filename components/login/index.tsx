@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Input } from "../../ui/input";
+import { Input } from "../../ui/Input";
 
 // function Input({ label, register, required }: any) {
 //   return (
