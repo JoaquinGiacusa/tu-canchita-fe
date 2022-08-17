@@ -9,5 +9,5 @@ const Home: NextPage = () => {
     <Text1>Uñaso</Text1>
     <Text2 text="Hola como andas?"/>
   </div>;
-
+}
 export default Home;

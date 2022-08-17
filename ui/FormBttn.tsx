@@ -7,6 +7,6 @@ export const FormBttn = ({placeholder}: props) => {
     <input 
         type="submit" 
         placeholder={placeholder} 
-        className="bg-[#529DE2] hover:bg-blue-700 text-white w-3/5 py-2 rounded" 
+        className="bg-[#529DE2] hover:bg-blue-700 text-white w-full py-2 rounded" 
     />
 )};
