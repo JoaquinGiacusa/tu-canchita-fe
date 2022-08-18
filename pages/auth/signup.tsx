@@ -1,11 +1,11 @@
 import { NextPage } from "next";
-import { Signup } from "../../components/signup";
+import { SignupForm } from "../../components/SignupForm";
 
-const Home: NextPage = () => {
+const Signup: NextPage = () => {
     return (
     <div className="flex justify-center h-3/5">
-        <Signup />
+        <SignupForm />
     </div>
 )}
 
-export default Home;
+export default Signup;
