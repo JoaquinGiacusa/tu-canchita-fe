@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { SignupForm } from "../../components/SignupForm";
+import { SignupForm } from "../../components/SignupForm/index2";
 
 const Signup: NextPage = () => {
     return (

@@ -76,6 +76,8 @@ export const SignupForm = () => {
                     name="first_name"
                     changeHandler={changeHandler}
                     errors={inputErrors}
+                    min={2}
+                    max={23}
                 />
                 
                 <Input 
@@ -84,6 +86,8 @@ export const SignupForm = () => {
                     name="last_name"
                     changeHandler={changeHandler}
                     errors={inputErrors}
+                    min={2}
+                    max={23}
                 />
 
 
