@@ -6,8 +6,6 @@ type Input = {
 };
 
 export const Input = ({ type, placeHolder, register, required }: Input) => {
-  console.log("xd", required);
-
   return (
     <input
       type={type}

@@ -1,5 +1,7 @@
+import { log } from "console";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { AlertForm } from "../../ui/alert-form";
 import { FormBttn } from "../../ui/FormBttn";
 import { Input } from "../../ui/input";
 import { Text1 } from "../../ui/Text1";
@@ -14,7 +16,7 @@ export const Form = () => {
   const onSubmit = (data: any) => console.log(data);
 
   return (
-    <div className="flex flex-col max-w-md px-4 py-8 mx-auto text-center bg-white rounded-lg shadow justify-self-center dark:bg-gray-800 ">
+    <div className="flex flex-col max-w-md px-4 py-8 mx-auto mt-12 text-center bg-white rounded-lg shadow justify-self-center dark:bg-gray-800 ">
       <Text1>Ingresar</Text1>
 
       <div className="p-6">
@@ -31,7 +33,9 @@ export const Form = () => {
             register={register}
             required={true}
           ></Input>
-
+          {(errors?.email || errors?.password) && (
+            <AlertForm>Error. Completa todos los campos.</AlertForm>
+          )}
           <FormBttn placeholder="Ingresar"></FormBttn>
         </form>
       </div>
