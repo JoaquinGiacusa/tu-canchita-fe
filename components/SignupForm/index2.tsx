@@ -2,20 +2,21 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "../../ui/Input";
 
+interface IformValues {
+    first_name?: string,
+    last_name?: string,
+    email?: string,
+    password?: string,
+    re_password?: string
+  }
+
 export const SignupForm = () => {
   const { register, handleSubmit, formState: {
     isDirty, errors
-  } } = useForm({
-    defaultValues: {
-        first_name: '',
-        last_name: '',
-        email: '',
-        password: '',
-        re_password: '',
-    }
-  });
+  } } = useForm<IformValues>();
   const onSubmit = (data: any) => alert(JSON.stringify(data));
   console.log('errors', errors)
+  console.log('isDirty', isDirty)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

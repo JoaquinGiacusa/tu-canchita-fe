@@ -1,11 +1,12 @@
 import { Path, UseFormRegister, FieldErrorsImpl } from "react-hook-form";
+import { ErrorMessage } from '@hookform/error-message'
 
 interface IformValues {
-  first_name: string,
-  last_name: string,
-  email: string,
-  password: string,
-  re_password: string
+  first_name?: string,
+  last_name?: string,
+  email?: string,
+  password?: string,
+  re_password?: string
 }
 
 type InputProps = {
@@ -15,8 +16,8 @@ type InputProps = {
   errors: any;
   min: number;
   max: number;
-  register: UseFormRegister<IformValues>
-  required: boolean
+  register: UseFormRegister<IformValues>;
+  required: boolean;
 };
 
 export const Input = ({
@@ -29,6 +30,7 @@ export const Input = ({
   min,
   max,
 }: InputProps) => {
+  console.log('errors2', errors)
   return (
     <div className="w-24 h-24">
       <input
@@ -51,12 +53,13 @@ export const Input = ({
                 message: 'error pattern'
             },
             validate: {
-              email: (value) => (type === 'email' && value.match(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i) === null) || 'errors email'
+              email: (value: any) => (type === 'email' && value.match(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i) === null) || 'errors email'
             }
         })}
          
       />
-      {<p>{`${errors.first_name.message}`}</p>}
+      <ErrorMessage errors={errors} name={name} render={({message}) =><p>{message}</p>} />
+      {errors? <p>{`${errors.message}`}</p>: null}
     </div>
  
   );
