@@ -6,7 +6,7 @@ import { FormBttn } from "../../ui/FormBttn";
 import { Input } from "../../ui/input";
 import { Text1 } from "../../ui/Text1";
 
-export const Form = () => {
+export const SigninForm = () => {
   const {
     register,
     formState: { errors },
