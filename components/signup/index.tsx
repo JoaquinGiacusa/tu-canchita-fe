@@ -50,27 +50,27 @@ export const SignupForm = () => {
             placeHolder="Email"
             register={register}
           ></Input>
+          {errors?.email && <AlertForm>{errors?.email?.message}</AlertForm>}
           <Input
             name="password"
             type="password"
             placeHolder="Contraseña"
             register={register}
           ></Input>
+          {errors?.password && (
+            <AlertForm>{errors?.password?.message}</AlertForm>
+          )}
           <Input
             name="rePassword"
             type="password"
             placeHolder="Repetir contraseña"
             register={register}
           ></Input>
-          {errors?.email && <AlertForm>{errors?.email?.message}</AlertForm>}
-          {errors?.password && (
-            <AlertForm>{errors?.password?.message}</AlertForm>
-          )}
           {errors?.rePassword && (
             <AlertForm>{errors?.rePassword?.message}</AlertForm>
           )}
 
-          <FormBttn placeholder="Ingresar"></FormBttn>
+          <FormBttn placeholder="Registrarse"></FormBttn>
         </form>
       </div>
     </div>

@@ -10,6 +10,9 @@ const Home: NextPage = () => {
   return (
     <div>
       <SignupForm></SignupForm>
+      <br />
+
+      <SigninForm></SigninForm>
     </div>
   );
 };
